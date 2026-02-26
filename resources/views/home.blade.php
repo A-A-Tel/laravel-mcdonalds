@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/css/style.css">
         <title>{{ config('app.name', 'Laravel') }}</title>
     </head>
-    <body class="">
-
+    <body>
+        @include('header', ['page' => 'home'])
     </body>
 </html>
