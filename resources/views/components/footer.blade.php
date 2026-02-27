@@ -7,6 +7,6 @@
         <a target="_blank" href="https://www.linkedin.com/company/mcdonald-s-nederland-b-v-/"><img src="/img/linkedin.svg" alt="linkedin"></a>
         <a target="_blank" href="https://www.facebook.com/McDonalds/"><img src="/img/facebook.svg" alt="facebook"></a>
         <a target="_blank" href="https://www.instagram.com/mcdonalds/"><img src="/img/instagram.svg" alt="instagram"></a>
-        <a target="_blank" href="https://twitter.com/McDonalds"><img src="/img/twitter.svg" alt="twitter"></a>
+        <a target="_blank" href="https://www.twitter.com/McDonalds"><img src="/img/twitter.svg" alt="twitter"></a>
     </div>
 </footer>
