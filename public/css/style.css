@@ -143,6 +143,15 @@ nav {
         font-size: 1.4em;
         line-height: 2rem;
     }
+
+    a {
+        font-family: speedee,sans-serif;
+        align-self: center;
+        font-size: 2.2rem;
+        background: var(--primary-light);
+        padding: 1rem;
+        border-radius: 1rem;
+    }
 }
 
 .sensation-container {
@@ -171,16 +180,21 @@ nav {
     }
 
     div {
-        margin: -15rem 0 15rem 0;
+        margin: -15rem 0 0 0;
         width: 50rem;
     }
+}
 
-    a {
-        font-family: speedee,sans-serif;
-        align-self: center;
-        font-size: 2.2rem;
-        background: var(--primary-light);
-        padding: 1rem;
-        border-radius: 1rem;
+.cafe-container {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 60vw;
+    background: url("/img/cafe.png");
+    background-size: cover;
+    margin: 12rem 0 0 0;
+
+    div {
+        max-width: 40rem;
     }
 }
