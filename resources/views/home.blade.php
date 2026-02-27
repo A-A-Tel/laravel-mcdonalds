@@ -25,7 +25,7 @@
             <h2>Wij hebben restaurants over de hele wereld.</h2>
             <p>Al bent u aan het genieten in de staten, de prachtige landschappen van Japan, de lage landen langs the
                 Europese kust of the kleine eilanden van Hawaii, er is altijd een McDonald's bij u in de buurt.</p>
-            <a target="_blank   " href="https://www.google.com/maps/search/mcdonalds/">Bekijk locaties</a>
+            <a target="_blank" href="https://www.google.com/maps/search/mcdonalds/">Bekijk locaties</a>
         </div>
     </div>
 
