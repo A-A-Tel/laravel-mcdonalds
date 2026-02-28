@@ -6,5 +6,5 @@
         <a href="/" class="@if($page === 'reserve') selected @endif">Reserveren</a>
         <a href="/contact" class="@if($page === 'contact') selected @endif">Contact opnemen</a>
     </nav>
-    <button>Login</button>
+    <button onclick="window.location.href = '/login'">Login</button>
 </header>

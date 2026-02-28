@@ -272,3 +272,38 @@ nav {
     height: 100vh;
     width: 100%;
 }
+
+.login-form {
+    width: 70rem;
+    height: fit-content;
+    padding: 6rem;
+    border-radius: 2.5rem;
+    background: var(--primary);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+
+    input {
+        width: 100%;
+        height: 3rem;
+        font-size: 1.2rem;
+        font-family: speedee, sans-serif;
+        border: none;
+        padding: 0 1rem;
+        background: var(--primary-light);
+        border-radius: 1rem;
+        color: var(--text-light);
+    }
+
+    button {
+        padding: 1rem;
+        border-radius: 0.7rem;
+        background: var(--primary-light);
+        font-size: 1.5rem;
+        font-family: speedee, sans-serif;
+        color: var(--text-light);
+    }
+}
