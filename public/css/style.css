@@ -307,3 +307,7 @@ nav {
         color: var(--text-light);
     }
 }
+
+.dashboard {
+    display: flex;
+}

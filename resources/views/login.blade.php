@@ -12,6 +12,7 @@
 
 <main>
     <form action="/login" method="post" class="login-form">
+        @csrf
         <input required type="email" placeholder="Email" name="email">
         <input required type="password" placeholder="Wachtwoord" name="password">
         <button type="submit">Inloggen</button>

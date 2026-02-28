@@ -2,12 +2,16 @@
 
 namespace App\Models;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class User extends Model
+class User extends Authenticatable
 {
     protected $guarded = ['admin'];
+
+    protected $hidden = ['password', 'remember_token'];
 
     public function contact_requests(): HasMany
     {
