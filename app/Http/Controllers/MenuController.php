@@ -11,6 +11,6 @@ class MenuController extends Controller
     public function index() {
         $items = Item::all()->toArray();
 
-        return view('menu', ['items' => $items]);
+        return view('pages.menu', ['items' => $items]);
     }
 }

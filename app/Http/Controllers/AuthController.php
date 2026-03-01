@@ -18,7 +18,7 @@ class AuthController extends Controller
             return redirect()->intended('/dashboard');
         }
 
-        return view('login', ['fail' => true, 'email' => $request->validated('email')]);
+        return view('pages.login', ['fail' => true, 'email' => $request->validated('email')]);
     }
 
     public function logout(Request $request) {

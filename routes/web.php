@@ -8,15 +8,15 @@ use App\Http\Middleware\EnsureAdmin;
 
 // Public routes
 
-Route::view('/', 'home')->name('home');
-Route::view('/contact', 'contact')->name('contact');
+Route::view('/', 'pages.home')->name('home');
+Route::view('/contact', 'pages.contact')->name('contact');
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 
 
 // Auth routes
 
 Route::controller(AuthController::class)->group(function () {
-    Route::get('/login', fn () => view('login', ['fail' => false]))->name('login');
+    Route::get('/login', fn () => view('pages.login', ['fail' => false]))->name('login');
     Route::post('/login', 'login')->name('login.attempt');
     Route::post('/logout', 'logout')->middleware('auth')->name('logout');
 });
@@ -25,7 +25,7 @@ Route::controller(AuthController::class)->group(function () {
 // User routes
 
 Route::middleware('auth')->group(function () {
-    Route::view('/dashboard', 'dashboard')->name('dashboard');
+    Route::view('/dashboard', 'pages.dashboard')->name('dashboard');
 });
 
 
