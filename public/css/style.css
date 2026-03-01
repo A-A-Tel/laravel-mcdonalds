@@ -90,12 +90,23 @@ header {
     }
 
     button {
-        width: 5.7rem;
-        height: 2.6rem;
+        width: fit-content;
+        padding: 0.5rem 0.7rem;
         background: var(--primary-light);
         border-radius: 0.7rem;
         font-size: 1.2rem;
     }
+
+    div {
+        display: flex;
+        gap: 1rem;
+        width: 20rem;
+    }
+
+    div#buttons {
+        justify-content: flex-end;
+    }
+
 }
 
 main {
@@ -271,4 +282,80 @@ nav {
     justify-content: space-between;
     height: 100vh;
     width: 100%;
+}
+
+.login-form {
+    width: 70rem;
+    height: fit-content;
+    padding: 6rem;
+    border-radius: 2.5rem;
+    background: var(--primary);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+
+    input {
+        width: 100%;
+        height: 3rem;
+        font-size: 1.2rem;
+        font-family: speedee, sans-serif;
+        border: none;
+        padding: 0 1rem;
+        background: var(--primary-light);
+        border-radius: 1rem;
+        color: var(--text-light);
+    }
+
+    button {
+        padding: 1rem;
+        border-radius: 0.7rem;
+        background: var(--primary-light);
+        font-size: 1.5rem;
+        font-family: speedee, sans-serif;
+        color: var(--text-light);
+    }
+
+    h6 {
+        color: var(--secondary-light);
+        font-size: 1.3rem;
+        font-family: speedee, sans-serif;
+    }
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60rem;
+    padding: 2rem;
+    background: var(--primary);
+    border-radius: 1.2rem;
+    gap: 1rem;
+
+    h1 {
+        font-family: speedee, sans-serif;
+        color: var(--text-light);
+        font-size: 3.5rem;
+
+        span {
+            font-size: 3.5rem;
+            font-family: speedee, sans-serif;
+            color: var(--accent);
+        }
+    }
+
+    span {
+        font-family: Roboto, sans-serif;
+        color: var(--text-light);
+        font-size: 1.5rem;
+
+        span {
+            font-size: 1.5rem;
+            font-family: Roboto, sans-serif;
+            color: var(--accent);
+        }
+    }
 }

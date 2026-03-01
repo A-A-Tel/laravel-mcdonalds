@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', fn () => view('home'))->name('home');
+Route::get('/contact', fn () => view('contact'))->name('contact');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/login', fn () => view('login', ['fail' => false]))->name('login');
+Route::post('/login', [LoginController::class, 'login']);
 
-Route::post('/login', 'App\Http\Controllers\LoginController@login')->name('login');
+Route::get('/dashboard', fn () => view('dashboard', ['user' => Auth::user()]))->middleware(['auth'])->name('dashboard');
