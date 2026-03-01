@@ -348,14 +348,98 @@ nav {
     }
 
     span {
-        font-family: Roboto, sans-serif;
+        font-family: roboto, sans-serif;
         color: var(--text-light);
         font-size: 1.5rem;
 
         span {
             font-size: 1.5rem;
-            font-family: Roboto, sans-serif;
+            font-family: roboto, sans-serif;
             color: var(--accent);
         }
+    }
+}
+
+.order-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 20rem;
+    height: 40rem;
+
+    div {
+        width: 20rem;
+        height: 20rem;
+        background: url('/img/placeholder.png') no-repeat center;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+    }
+
+    div::after {
+        position: absolute;
+        content: attr(price);
+        background: var(--accent);
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        bottom: -1.2rem;
+        right: -1.2rem;
+        font-size: 1.3rem;
+        font-family: speedee, sans-serif;
+    }
+
+    h2 {
+        font-family: speedee, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-family: montserrat, sans-serif;
+        font-size: 1rem;
+        max-width: 17rem;
+        text-align: center;
+    }
+}
+
+.order-item-container {
+    display: flex;
+    padding: 0 15rem;
+    gap: 5rem;
+    justify-content: center;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+
+.admin-component {
+    background: var(--secondary-dark);
+
+    button {
+        background: var(--secondary);
+    }
+}
+
+.admin-panel-container {
+    display: flex;
+    gap: 7rem;
+    width: fit-content;
+    margin: 0 auto;
+
+    span {
+        display: flex;
+        justify-content: center;
+        width: 25rem;
+    }
+
+    a {
+        padding: 1.5rem;
+        background: var(--secondary);
+        color: var(--text-light);
+        font-family: speedee, sans-serif;
+        font-size: 2rem;
+        border-radius: 0.7rem;
     }
 }

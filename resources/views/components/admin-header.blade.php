@@ -1,10 +1,10 @@
-<header>
+<header class="admin-component">
     <div><img src="/img/logo.png" alt="logo"></div>
     <nav>
-        <a href="/" class="@if($page === 'home') selected @endif">Home</a>
-        <a href="/menu" class="@if($page === 'menu') selected @endif">Menukaart</a>
-        <a href="/" class="@if($page === 'reserve') selected @endif">Reserveren</a>
-        <a href="/contact" class="@if($page === 'contact') selected @endif">Contact opnemen</a>
+        <a href="/admin" class="@if($page === 'admin') selected @endif">Paneel</a>
+        <a href="/admin/orders" class="@if($page === 'admin/menu') selected @endif">Menukaart</a>
+        <a href="/admin/reservations" class="@if($page === 'admin/contact') selected @endif">Reserveringen</a>
+        <a href="/admin/contacts" class="@if($page === 'admin/reserve') selected @endif">Contactinzendingen</a>
     </nav>
     @if(Auth::check())
         <div id="buttons">
