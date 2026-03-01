@@ -25,7 +25,7 @@ class StoreItemRequest extends FormRequest
             'name' => 'required',
             'price' => 'required',
             'description' => 'required|regex:/^\d{2,3},\d{2}$/',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ];
     }
 }

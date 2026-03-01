@@ -2,7 +2,7 @@
     <div><img src="/img/logo.png" alt="logo"></div>
     <nav>
         <a href="/admin" class="@if($page === 'admin') selected @endif">Paneel</a>
-        <a href="/admin/orders" class="@if($page === 'admin/menu') selected @endif">Menukaart</a>
+        <a href="/admin/items" class="@if($page === 'admin/items') selected @endif">Menukaart</a>
         <a href="/admin/reservations" class="@if($page === 'admin/contact') selected @endif">Reserveringen</a>
         <a href="/admin/contacts" class="@if($page === 'admin/reserve') selected @endif">Contactinzendingen</a>
     </nav>

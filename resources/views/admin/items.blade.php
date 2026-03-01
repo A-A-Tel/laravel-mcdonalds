@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>{{ config('app.name', 'Laravel') }} - Contact</title>
 </head>
-<body class="contact-body">
-@include('components.admin-header', ['page' => 'admin'])
+<body>
+@include('components.admin-header', ['page' => 'admin/items'])
 
 <main>
-    <div class="admin-panel-container">
-        <span><a href="">Bestellingen</a></span>
-        <span><a href="">Reserveringen</a></span>
-        <span><a href="">Contactinzendingen</a></span>
+    <div class="order-item-container">
+        @foreach($items as $item)
+            @include('components.item', ['item' => $item])
+        @endforeach
     </div>
 </main>
 

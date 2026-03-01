@@ -13,7 +13,16 @@ class ItemController
      */
     public function index()
     {
-        //
+        $items = Item::all()->toArray();
+
+        return view('menu', ['items' => $items]);
+    }
+
+    public function admindex()
+    {
+        $items = Item::all()->toArray();
+
+        return view('admin-items', ['items' => $items]);
     }
 
     /**
