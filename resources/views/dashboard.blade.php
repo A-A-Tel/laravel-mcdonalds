@@ -10,18 +10,12 @@
 @include('components.header', ['page' => 'dashboard'])
 
 <main>
-    <div>
+    <div class="dashboard">
         <h1>
-            Hallo, {{ $user->name }}!
+            Hallo, <span>{{ $user->name }}</span>!
         </h1>
-        <ul>
-            <li>
-                Email: {{ $user->email }}
-            </li>
-            <li>
-                Accountaanmaak datum: {{ $user->created_at }}
-            </li>
-        </ul>
+        <span>Email: <span>{{ $user->email }}</span></span>
+        <span>Accountaanmaak datum: <span>{{ $user->created_at }}</span></span>
     </div>
 </main>
 

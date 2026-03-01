@@ -17,6 +17,6 @@ class LoginController extends Controller
             return redirect()->intended('/dashboard');
         }
 
-        return view('login');
+        return view('login', ['fail' => true, 'email' => $request->validated('email')]);
     }
 }

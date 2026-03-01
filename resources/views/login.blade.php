@@ -13,8 +13,11 @@
 <main>
     <form action="/login" method="post" class="login-form">
         @csrf
-        <input required type="email" placeholder="Email" name="email">
+        <input required type="email" placeholder="Email" name="email" value="@if($fail){{$email}}@endif">
         <input required type="password" placeholder="Wachtwoord" name="password">
+        @if($fail)
+            <h6>Het ingevoerde email of wachtwoord was onjuist</h6>
+        @endif
         <button type="submit">Inloggen</button>
     </form>
 </main>

@@ -90,12 +90,23 @@ header {
     }
 
     button {
-        width: 5.7rem;
-        height: 2.6rem;
+        width: fit-content;
+        padding: 0.5rem 0.7rem;
         background: var(--primary-light);
         border-radius: 0.7rem;
         font-size: 1.2rem;
     }
+
+    div {
+        display: flex;
+        gap: 1rem;
+        width: 20rem;
+    }
+
+    div#buttons {
+        justify-content: flex-end;
+    }
+
 }
 
 main {
@@ -306,8 +317,45 @@ nav {
         font-family: speedee, sans-serif;
         color: var(--text-light);
     }
+
+    h6 {
+        color: var(--secondary-light);
+        font-size: 1.3rem;
+        font-family: speedee, sans-serif;
+    }
 }
 
 .dashboard {
     display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60rem;
+    padding: 2rem;
+    background: var(--primary);
+    border-radius: 1.2rem;
+    gap: 1rem;
+
+    h1 {
+        font-family: speedee, sans-serif;
+        color: var(--text-light);
+        font-size: 3.5rem;
+
+        span {
+            font-size: 3.5rem;
+            font-family: speedee, sans-serif;
+            color: var(--accent);
+        }
+    }
+
+    span {
+        font-family: Roboto, sans-serif;
+        color: var(--text-light);
+        font-size: 1.5rem;
+
+        span {
+            font-size: 1.5rem;
+            font-family: Roboto, sans-serif;
+            color: var(--accent);
+        }
+    }
 }
