@@ -2,7 +2,7 @@
     <div><img src="/img/logo.png" alt="logo"></div>
     <nav>
         <a href="{{route('home')}}" class="@if($page === 'home') selected @endif">Home</a>
-        <a href="{{route('admin.items.index')}}" class="@if($page === 'admin/items') selected @endif">Menukaart</a>
+        <a href="{{route('admin.items.index')}}" class="@if($page === 'admin/items') selected @endif">Menu items</a>
         <a href="/admin/reservations" class="@if($page === 'admin/contact') selected @endif">Reserveringen</a>
         <a href="/admin/contacts" class="@if($page === 'admin/reserve') selected @endif">Contactinzendingen</a>
     </nav>

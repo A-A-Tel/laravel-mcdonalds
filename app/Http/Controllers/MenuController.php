@@ -9,7 +9,7 @@ use Illuminate\Routing\Controller;
 class MenuController extends Controller
 {
     public function index() {
-        $items = Item::all()->toArray();
+        $items = Item::all();
 
         return view('pages.menu', ['items' => $items]);
     }

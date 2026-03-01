@@ -11,7 +11,7 @@
 
 <main>
     <a href="{{route('admin.items.create')}}" class="item-add">Toevoegen</a>
-    <div class="order-item-container">
+    <div class="menu-item-container">
         @foreach($items as $item)
             @include('components.item', ['item' => $item])
         @endforeach
