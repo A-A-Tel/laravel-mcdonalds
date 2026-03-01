@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\OrderController;
+use App\Http\Controllers\MenuController;
 use App\Http\Middleware\EnsureAdmin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -15,7 +15,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', fn() => view('dashboard', ['user' => Auth::user()]))->middleware(['auth'])->name('dashboard');
 
-Route::get('/order', [OrderController::class, 'index'])->middleware(['auth'])->name('order');
+Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 
 Route::prefix('/admin')->middleware(['auth', EnsureAdmin::class])->group(function ()
 {

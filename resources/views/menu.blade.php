@@ -7,7 +7,7 @@
     <title>{{ config('app.name', 'Laravel') }} - Home</title>
 </head>
 <body>
-@include('components.header', ['page' => 'order'])
+@include('components.header', ['page' => 'menu'])
 
 <main>
     <div class="order-item-container">
