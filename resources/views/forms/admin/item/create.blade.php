@@ -13,7 +13,7 @@
     @csrf
     <input minlength="1" maxlength="32" placeholder="Naam" type="text" name="name" value="{{ old('name') }}">
     <input maxlength="128" placeholder="Beschrijving" type="text" name="description" value="{{ old('description') }}">
-    <input placeholder="Prijs" type="number" step="0.01" name="price" value="{{ old('price') }}">
+    <input max="999.99" min="0.01" placeholder="Prijs" type="number" step="0.01" name="price" value="{{ old('price') }}">
     <div class="file-input-container">
         <input hidden type="file" accept="image/png, image/jpeg" id="fileInput" name="image">
         <span id="fileName"></span>

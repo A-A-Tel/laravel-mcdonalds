@@ -46,7 +46,7 @@ class ItemController
         $item = new Item();
         $item->name = $data['name'];
         $item->description = $data['description'];
-        $item->price = $data['price'];
+        $item->price = $this->formatPrice($data['price']);
         $item->image = $string_name;
         $item->save();
 
@@ -82,7 +82,7 @@ class ItemController
 
         $item->name = $data['name'];
         $item->description = $data['description'];
-        $item->price = $data['price'];
+        $item->price = $this->formatPrice($data['price']);
         if ($data['image']?? false) $item->image = $string_name;
         $item->save();
 
@@ -96,5 +96,10 @@ class ItemController
     {
         $item->delete();
         return redirect()->route('admin.items.index');
+    }
+
+    private function formatPrice(string $price): string
+    {
+        return str_contains($price, '.') ? str_replace('.', ',', $price) : $price;
     }
 }

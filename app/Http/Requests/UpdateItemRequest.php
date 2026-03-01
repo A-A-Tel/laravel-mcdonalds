@@ -24,7 +24,7 @@ class UpdateItemRequest extends FormRequest
         return [
             'name' => 'required|string|min:1|max:32',
             'description' => 'nullable|string',
-            'price' => 'required|min:1|max:6|regex:/^\d{2,3}[,\.]\d{2}$/',
+            'price' => 'required|min:1|max:6|regex:/^\d{1,3}([,\.]\d{2})?$/',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
         ];    }
 }
