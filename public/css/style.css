@@ -284,7 +284,7 @@ nav {
     width: 100%;
 }
 
-.login-form {
+.generic-form {
     width: 70rem;
     height: fit-content;
     padding: 6rem;
@@ -441,5 +441,52 @@ nav {
         font-family: speedee, sans-serif;
         font-size: 2rem;
         border-radius: 0.7rem;
+    }
+}
+
+.item-add {
+    display: flex;
+    padding: 1.5rem;
+    background: var(--primary-light);
+    font-size: 2rem;
+    margin: 1rem auto;
+    border-radius: 0.7rem;
+    width: fit-content;
+    font-family: speedee, sans-serif;
+    color: var(--text-light);
+}
+
+.file-input-container {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+
+    label {
+        padding: 1rem;
+        background: #4CAF50;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: speedee, sans-serif;
+        text-wrap: nowrap;
+    }
+
+    label:hover {
+        background: #43a047;
+    }
+
+    span {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 3rem;
+        font-size: 1.2rem;
+        font-family: speedee, sans-serif;
+        border: none;
+        padding: 0 1rem;
+        background: var(--primary-light);
+        border-radius: 1rem;
+        color: var(--text-light);
     }
 }

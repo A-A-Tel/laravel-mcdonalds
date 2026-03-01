@@ -10,6 +10,7 @@
 @include('components.admin.header', ['page' => 'admin/items'])
 
 <main>
+    <a href="{{route('admin.items.create')}}" class="item-add">Toevoegen</a>
     <div class="order-item-container">
         @foreach($items as $item)
             @include('components.item', ['item' => $item])

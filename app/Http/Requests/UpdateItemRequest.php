@@ -23,8 +23,8 @@ class UpdateItemRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'price' => 'required',
-            'description' => 'required|regex:/^\d{2,3},\d{2}$/',
+            'price' => 'required|regex:/^\d{2,3},\d{2}$/',
+            'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ];    }
 }
