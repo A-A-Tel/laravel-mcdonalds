@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>{{ config('app.name', 'Laravel') }} - Dashboard</title>
+</head>
+<body class="contact-body">
+@include('components.header', ['page' => 'dashboard'])
+
+<main>
+    <div class="dashboard">
+        <h1>
+            Hallo, <span>{{ $user->name }}</span>!
+        </h1>
+        <span>Email: <span>{{ $user->email }}</span></span>
+        <span>Accountaanmaak datum: <span>{{ $user->created_at }}</span></span>
+    </div>
+</main>
+
+@include('components.footer')
+</body>
+</html>
