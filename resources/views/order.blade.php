@@ -10,9 +10,14 @@
 @include('components.header', ['page' => 'order'])
 
 <main>
-    @foreach($items as $item)
-        @include('components.item', ['item' => $item])
-    @endforeach
+    <div class="order-item-container">
+        @foreach($items as $item)
+            @include('components.item', ['item' => $item])
+        @endforeach
+        @foreach($items as $item)
+            @include('components.item', ['item' => $item])
+        @endforeach
+    </div>
 </main>
 
 @include('components.footer')

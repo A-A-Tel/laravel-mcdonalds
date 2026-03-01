@@ -404,3 +404,12 @@ nav {
         text-align: center;
     }
 }
+
+.order-item-container {
+    display: flex;
+    padding: 0 15rem;
+    gap: 5rem;
+    justify-content: center;
+    height: fit-content;
+    flex-wrap: wrap;
+}
