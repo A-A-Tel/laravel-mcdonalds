@@ -490,3 +490,35 @@ nav {
         color: var(--text-light);
     }
 }
+
+.item-show {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: fit-content;
+    margin: 5rem auto;
+}
+
+.item-modify-buttons {
+    width: 20rem;
+    height: 20rem;
+    padding: 4rem;
+    background: var(--secondary-dark);
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    button {
+        background: var(--primary-light);
+        color: var(--text-light);
+        padding: 0.8rem;
+        border-radius: 0.7rem;
+        font-family: speedee, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    button  {
+        width: 100%;
+    }
+}

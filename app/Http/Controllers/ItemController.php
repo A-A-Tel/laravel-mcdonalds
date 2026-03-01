@@ -14,11 +14,11 @@ class ItemController
     {
         $items = Item::all();
 
-        return view('admin.items', ['items' => $items]);
+        return view('admin.items.index', ['items' => $items]);
     }
 
     public function show(Item $item) {
-
+        return view('admin.items.show', ['item' => $item]);
     }
 
     /**
@@ -58,7 +58,7 @@ class ItemController
      */
     public function edit(Item $item)
     {
-        //
+        return view('forms.admin.item.edit', ['item' => $item]);
     }
 
     /**
@@ -66,7 +66,27 @@ class ItemController
      */
     public function update(UpdateItemRequest $request, Item $item)
     {
-        //
+        $data = $request->validated();
+
+        $string_name = '';
+        if ($data['image']?? false) {
+            Storage::disk('public')->delete('items/', $item->image);
+
+            $extension = $data['image']->getClientOriginalExtension();
+            do {
+                $string_name = Str::random() . '.' . $extension;
+            } while (Storage::disk('public')->exists('items/' . $string_name));
+
+            Storage::disk('public')->putFileAs('items/', $data['image'], $string_name);
+        }
+
+        $item->name = $data['name'];
+        $item->description = $data['description'];
+        $item->price = $data['price'];
+        if ($data['image']?? false) $item->image = $string_name;
+        $item->save();
+
+        return redirect()->route('admin.items.index');
     }
 
     /**
@@ -74,6 +94,7 @@ class ItemController
      */
     public function destroy(Item $item)
     {
-
+        $item->delete();
+        return redirect()->route('admin.items.index');
     }
 }

@@ -11,7 +11,7 @@ class UpdateItemRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,9 +22,9 @@ class UpdateItemRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required',
-            'price' => 'required|regex:/^\d{2,3},\d{2}$/',
-            'description' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'name' => 'required|string|min:1|max:32',
+            'description' => 'nullable|string',
+            'price' => 'required|min:1|max:6|regex:/^\d{2,3}[,\.]\d{2}$/',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
         ];    }
 }
