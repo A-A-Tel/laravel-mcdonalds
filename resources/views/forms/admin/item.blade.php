@@ -9,16 +9,21 @@
 <body class="contact-body">
 @include('components.admin.header', ['page' => 'item'])
 
-<form class="generic-form" action="{{route('admin.items.store')}}">
+<form class="generic-form" method="post" action="{{route('admin.items.store')}}" enctype="multipart/form-data">
     @csrf
-    <input placeholder="Naam" type="text" name="name">
-    <input placeholder="Beschrijving" type="text" name="description">
-    <input placeholder="Prijs" type="number" step="0.01" name="price">
+    <input minlength="1" maxlength="32" placeholder="Naam" type="text" name="name" value="{{ old('name') }}">
+    <input maxlength="128" placeholder="Beschrijving" type="text" name="description" value="{{ old('description') }}">
+    <input placeholder="Prijs" type="number" step="0.01" name="price" value="{{ old('price') }}">
     <div class="file-input-container">
         <input hidden type="file" accept="image/png, image/jpeg" id="fileInput" name="image">
         <span id="fileName"></span>
         <label for="fileInput" class="upload">Kies afbeelding</label>
     </div>
+    @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                <h6>{{ $error }}</h6>
+            @endforeach
+    @endif
     <button>Maken</button>
 </form>
 
