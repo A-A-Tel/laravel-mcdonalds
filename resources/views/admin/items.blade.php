@@ -7,7 +7,7 @@
     <title>{{ config('app.name', 'Laravel') }} - Contact</title>
 </head>
 <body>
-@include('components.admin-header', ['page' => 'admin/items'])
+@include('components.admin.header', ['page' => 'admin/items'])
 
 <main>
     <div class="order-item-container">
@@ -17,6 +17,6 @@
     </div>
 </main>
 
-@include('components.admin-footer')
+@include('components.admin.footer')
 </body>
 </html>

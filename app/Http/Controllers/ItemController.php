@@ -15,6 +15,10 @@ class ItemController
         return view('admin.items', ['items' => $items]);
     }
 
+    public function show(Item $item) {
+
+    }
+
     /**
      * Show the form for creating a new resource.
      */
