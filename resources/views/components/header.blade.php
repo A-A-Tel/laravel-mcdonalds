@@ -8,10 +8,10 @@
     </nav>
     @if(Auth::check())
         <div id="buttons">
-            <button onclick="window.location.href = '/dashboard'">Dashboard</button>
-            <button>Logout</button>
+            <button onclick="window.location.href='/dashboard'">Controlepaneel</button>
+            <form method="post" action="/logout">@csrf<button type="submit">Log uit</button></form>
         </div>
     @else
-        <div id="buttons"><button onclick="window.location.href = '/login'">Login</button></div>
+        <div id="buttons"><button onclick="window.location.href='/login'">Log in</button></div>
     @endif
 </header>
