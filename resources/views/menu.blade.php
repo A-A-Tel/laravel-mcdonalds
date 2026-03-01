@@ -14,9 +14,6 @@
         @foreach($items as $item)
             @include('components.item', ['item' => $item])
         @endforeach
-        @foreach($items as $item)
-            @include('components.item', ['item' => $item])
-        @endforeach
     </div>
 </main>
 
