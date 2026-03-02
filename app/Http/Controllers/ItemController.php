@@ -26,7 +26,7 @@ class ItemController
      */
     public function create()
     {
-        return view('forms.admin.item.create');
+        return view('admin.items.create');
     }
 
     /**
@@ -58,7 +58,7 @@ class ItemController
      */
     public function edit(Item $item)
     {
-        return view('forms.admin.item.edit', ['item' => $item]);
+        return view('admin.items.edit', ['item' => $item]);
     }
 
     /**
