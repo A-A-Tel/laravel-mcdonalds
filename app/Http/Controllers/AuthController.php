@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
-class LoginController extends Controller
+class AuthController extends Controller
 {
     public function login(LoginRequest $request) {
         $credentials = $request->validated();
@@ -18,7 +18,7 @@ class LoginController extends Controller
             return redirect()->intended('/dashboard');
         }
 
-        return view('login', ['fail' => true, 'email' => $request->validated('email')]);
+        return view('pages.login', ['fail' => true, 'email' => $request->validated('email')]);
     }
 
     public function logout(Request $request) {

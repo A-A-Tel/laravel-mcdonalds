@@ -1,28 +1,5 @@
-<div class="order-item">
-    <div price="€XX,XX">
-
-    </div>
-    <h2>Product name</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores atque delectus deserunt eaque facere fuga id, in ipsa ipsam ipsum maiores nesciunt possimus quasi ratione rerum tenetur veniam voluptates.</p>
-</div>
-<div class="order-item">
-    <div price="€XX,XX">
-
-    </div>
-    <h2>Product name</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores atque delectus deserunt eaque facere fuga id, in ipsa ipsam ipsum maiores nesciunt possimus quasi ratione rerum tenetur veniam voluptates.</p>
-</div>
-<div class="order-item">
-    <div price="€XX,XX">
-
-    </div>
-    <h2>Product name</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores atque delectus deserunt eaque facere fuga id, in ipsa ipsam ipsum maiores nesciunt possimus quasi ratione rerum tenetur veniam voluptates.</p>
-</div>
-<div class="order-item">
-    <div price="€XX,XX">
-
-    </div>
-    <h2>Product name</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores atque delectus deserunt eaque facere fuga id, in ipsa ipsam ipsum maiores nesciunt possimus quasi ratione rerum tenetur veniam voluptates.</p>
+<div class="menu-item" @if($admin?? false) style="cursor: pointer;" onclick="window.location.assign('{{route('admin.items.show', [$item->id])}}')" @endif">
+    <div style="background-image: url('/storage/items/{{$item->image}}')" price="&euro;{{$item->price}}"></div>
+    <h2>{{$item->name}}</h2>
+    <p>{{$item->description}}</p>
 </div>

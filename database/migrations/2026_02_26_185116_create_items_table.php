@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->string('name', 32);
-            $table->string('price', 6);
-            $table->string('description', 128);
-            $table->binary('image');
+            $table->string('price', 5);
+            $table->string('description', 128)->nullable();
+            $table->string('image', 128);
             $table->timestamps();
         });
     }

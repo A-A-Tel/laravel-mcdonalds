@@ -12,10 +12,10 @@
 <main>
     <div class="dashboard">
         <h1>
-            Hallo, <span>{{ $user->name }}</span>!
+            Hallo, <span>{{ Auth::user()->name }}</span>!
         </h1>
-        <span>Email: <span>{{ $user->email }}</span></span>
-        <span>Accountaanmaak datum: <span>{{ $user->created_at }}</span></span>
+        <span>Email: <span>{{ Auth::user()->email }}</span></span>
+        <span>Accountaanmaak datum: <span>{{ Auth::user()->created_at }}</span></span>
     </div>
 </main>
 

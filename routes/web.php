@@ -1,23 +1,42 @@
 <?php
 
 use App\Http\Controllers\MenuController;
-use App\Http\Middleware\EnsureAdmin;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ItemController;
+use App\Http\Middleware\EnsureAdmin;
 
-Route::get('/', fn() => view('home'))->name('home');
-Route::get('/contact', fn() => view('contact'))->name('contact');
+// Public routes
 
-Route::get('/login', fn() => view('login', ['fail' => false]))->name('login');
-Route::post('/login', [LoginController::class, 'login']);
-
-Route::post('/logout', [LoginController::class, 'logout']);
-
-Route::get('/dashboard', fn() => view('dashboard', ['user' => Auth::user()]))->middleware(['auth'])->name('dashboard');
-
+Route::view('/', 'pages.home')->name('home');
+Route::view('/contact', 'pages.contact')->name('contact');
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 
-Route::prefix('/admin')->middleware(['auth', EnsureAdmin::class])->group(function ()
-{
-    Route::get('/', fn() => view('admin-panel'))->name('admin-panel');
+
+// Auth routes
+
+Route::controller(AuthController::class)->group(function () {
+    Route::get('/login', fn () => view('pages.login', ['fail' => false]))->name('login');
+    Route::post('/login', 'login')->name('login.attempt');
+    Route::post('/logout', 'logout')->middleware('auth')->name('logout');
 });
+
+
+// User routes
+
+Route::middleware('auth')->group(function () {
+    Route::view('/dashboard', 'pages.dashboard')->name('dashboard');
+});
+
+
+// Admin routes
+
+Route::prefix('admin')
+    ->middleware(['auth', EnsureAdmin::class])
+    ->group(function () {
+
+        Route::view('/', 'admin.dashboard')->name('admin.dashboard');
+
+        Route::resource('items', ItemController::class)
+            ->names('admin.items');
+    });
