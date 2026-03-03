@@ -19,6 +19,8 @@
         <img src="/img/email.svg" alt="email">
         <a target="_blank" href="mailto:gastenrelaties@nl.mcd.com">gastenrelaties@nl.mcd.com</a>
     </span>
+
+    <a href="{{route('contacts.create')}}">Contactverzoek opsturen</a>
 </div>
 
 @include('components.footer')

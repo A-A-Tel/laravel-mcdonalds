@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -26,6 +27,7 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::view('/dashboard', 'pages.dashboard')->name('dashboard');
+    Route::resource('contacts', ContactRequestController::class)->names('contacts');
 });
 
 

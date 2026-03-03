@@ -6,7 +6,7 @@ use App\Http\Requests\StoreContactRequestRequest;
 use App\Http\Requests\UpdateContactRequestRequest;
 use App\Models\ContactRequest;
 
-class ContactController
+class ContactRequestController
 {
     /**
      * Display a listing of the resource.
