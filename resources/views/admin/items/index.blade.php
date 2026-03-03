@@ -7,11 +7,11 @@
     <title>{{ config('app.name', 'Laravel') }} - Contact</title>
 </head>
 <body>
-@include('components.admin.header', ['page' => 'admin.items.index'])
+@include('components.admin.header', ['page' => 'admin.items'])
 
 <main>
     <a href="{{route('admin.items.create')}}" class="item-add">Toevoegen</a>
-    <div class="menu-item-container">
+    <div class="child-wrapper">
         @foreach($items as $item)
             @include('components.item', ['item' => $item, 'admin' => true])
         @endforeach

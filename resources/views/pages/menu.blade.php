@@ -10,7 +10,7 @@
 @include('components.header', ['page' => 'menu'])
 
 <main>
-    <div class="menu-item-container">
+    <div class="child-wrapper">
         @foreach($items as $item)
             @include('components.item', ['item' => $item])
         @endforeach

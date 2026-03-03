@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>{{ config('app.name', 'Laravel') }} - Contact</title>
 </head>
-<body class="contact-body">
-@include('components.admin.header', ['page' => 'admin'])
+<body>
+@include('components.admin.header', ['page' => 'admin.contacts'])
 
 <main>
-    <div class="admin-panel-container">
-        <span><a href="{{route('admin.items.index')}}">Menukaart</a></span>
-        <span><a href="">Reserveringen</a></span>
-        <span><a href="{{route('admin.contacts.index')}}">Contactinzendingen</a></span>
+    <div class="child-wrapper">
+        @foreach($contact_requests as $contact_request)
+            @include('components.admin.contact_request', ['$contact_request' => $contact_request, 'user' => $contact_request->user()->first()])
+        @endforeach
     </div>
 </main>
 

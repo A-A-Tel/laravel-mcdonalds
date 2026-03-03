@@ -25,7 +25,7 @@
                 <h6>{{ $error }}</h6>
             @endforeach
     @endif
-    <button>Maken</button>
+    <button>Bewerken</button>
 </form>
 
 <script>

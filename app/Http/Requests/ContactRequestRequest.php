@@ -4,14 +4,14 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateContactRequestRequest extends FormRequest
+class ContactRequestRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,7 @@ class UpdateContactRequestRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'message' => 'required|string|min:16|max:512',
         ];
     }
 }
