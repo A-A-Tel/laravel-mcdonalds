@@ -353,6 +353,22 @@ nav {
         }
     }
 
+    div {
+        display: flex;
+        gap: 1rem;
+        width: fit-content;
+        margin: 2rem auto;
+        a {
+            font-family: speedee, sans-serif;
+            align-self: center;
+            font-size: 2.2rem;
+            background: var(--primary-light);
+            padding: 1rem;
+            border-radius: 1rem;
+            color: var(--text-light);
+        }
+    }
+
     span {
         font-family: roboto, sans-serif;
         color: var(--text-light);

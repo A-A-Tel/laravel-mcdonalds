@@ -7,12 +7,12 @@
     <title>{{ config('app.name', 'Laravel') }} - Home</title>
 </head>
 <body>
-@include('components.header', ['page' => 'contacts'])
+@include('components.header', ['page' => 'reservations'])
 
 <main>
     <div class="child-wrapper">
-        @foreach($contact_requests as $contact_request)
-            @include('components.contact_request', ['$contact_request' => $contact_request])
+        @foreach($reservation_requests as $reservation_request)
+            @include('components.reservation_request', ['$reservation_request' => $reservation_request])
         @endforeach
     </div>
 </main>

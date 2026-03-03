@@ -12,7 +12,7 @@
 <main>
     <div class="admin-panel-container">
         <span><a href="{{route('admin.items.index')}}">Menukaart</a></span>
-        <span><a href="">Reserveringen</a></span>
+        <span><a href="{{route('admin.reservations.index')}}">Reserveringen</a></span>
         <span><a href="{{route('admin.contacts.index')}}">Contactinzendingen</a></span>
     </div>
 </main>

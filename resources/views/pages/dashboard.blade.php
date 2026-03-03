@@ -16,6 +16,10 @@
         </h1>
         <span>Email: <span>{{ Auth::user()->email }}</span></span>
         <span>Accountaanmaak datum: <span>{{ Auth::user()->created_at }}</span></span>
+        <div>
+            <a href="{{route('reservations.index')}}">Reserveringsverzoeken</a>
+            <a href="{{route('contacts.index')}}">Contactinzendingen</a>
+        </div>
     </div>
 </main>
 
