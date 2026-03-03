@@ -11,7 +11,7 @@
 
 
 <main>
-    <form action="/login" method="post" class="login-form">
+    <form action="/login" method="post" class="generic-form">
         @csrf
         <input required type="email" placeholder="Email" name="email" value="@if($fail){{$email}}@endif">
         <input required type="password" placeholder="Wachtwoord" name="password">

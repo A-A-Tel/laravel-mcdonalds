@@ -284,7 +284,7 @@ nav {
     width: 100%;
 }
 
-.login-form {
+.generic-form {
     width: 70rem;
     height: fit-content;
     padding: 6rem;
@@ -297,7 +297,7 @@ nav {
     gap: 2rem;
     align-items: center;
 
-    input {
+    input, textarea {
         width: 100%;
         height: 3rem;
         font-size: 1.2rem;
@@ -307,6 +307,12 @@ nav {
         background: var(--primary-light);
         border-radius: 1rem;
         color: var(--text-light);
+    }
+
+    textarea {
+        height: 15rem;
+        resize: none;
+        padding: 1rem;
     }
 
     button {
@@ -347,15 +353,243 @@ nav {
         }
     }
 
+    div {
+        display: flex;
+        gap: 1rem;
+        width: fit-content;
+        margin: 2rem auto;
+        a {
+            font-family: speedee, sans-serif;
+            align-self: center;
+            font-size: 2.2rem;
+            background: var(--primary-light);
+            padding: 1rem;
+            border-radius: 1rem;
+            color: var(--text-light);
+        }
+    }
+
     span {
-        font-family: Roboto, sans-serif;
+        font-family: roboto, sans-serif;
         color: var(--text-light);
         font-size: 1.5rem;
 
         span {
             font-size: 1.5rem;
-            font-family: Roboto, sans-serif;
+            font-family: roboto, sans-serif;
             color: var(--accent);
         }
+    }
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 20rem;
+    height: 40rem;
+
+    div {
+        width: 20rem;
+        height: 20rem;
+        background: url('/img/placeholder.png') no-repeat center;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+    }
+
+    div::after {
+        position: absolute;
+        content: attr(price);
+        background: var(--accent);
+        width: 8.1rem;
+        height: 8.1rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        bottom: -1.2rem;
+        right: -1.2rem;
+        font-size: 1.5rem;
+        font-family: speedee, sans-serif;
+    }
+
+    h2 {
+        font-family: speedee, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-family: montserrat, sans-serif;
+        font-size: 1rem;
+        max-width: 17rem;
+        text-align: center;
+    }
+}
+
+.child-wrapper {
+    display: flex;
+    padding: 0 5vw;
+    gap: 5rem;
+    justify-content: center;
+    height: fit-content;
+    flex-wrap: wrap;
+    min-height: 70vh;
+
+}
+
+.admin-component {
+    background: var(--secondary-dark);
+
+    button {
+        background: var(--secondary);
+    }
+}
+
+.admin-panel-container {
+    display: flex;
+    gap: 7rem;
+    width: fit-content;
+    margin: 0 auto;
+
+    span {
+        display: flex;
+        justify-content: center;
+        width: 25rem;
+    }
+
+    a {
+        padding: 1.5rem;
+        background: var(--secondary);
+        color: var(--text-light);
+        font-family: speedee, sans-serif;
+        font-size: 2rem;
+        border-radius: 0.7rem;
+    }
+}
+
+.item-add {
+    display: flex;
+    padding: 1.5rem;
+    background: var(--primary-light);
+    font-size: 2rem;
+    margin: 6rem auto;
+    border-radius: 0.7rem;
+    width: fit-content;
+    font-family: speedee, sans-serif;
+    color: var(--text-light);
+}
+
+.file-input-container {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+
+    label {
+        padding: 1rem;
+        background: #4CAF50;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: speedee, sans-serif;
+        text-wrap: nowrap;
+    }
+
+    label:hover {
+        background: #43a047;
+    }
+
+    span {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 3rem;
+        font-size: 1.2rem;
+        font-family: speedee, sans-serif;
+        border: none;
+        padding: 0 1rem;
+        background: var(--primary-light);
+        border-radius: 1rem;
+        color: var(--text-light);
+    }
+}
+
+.item-show {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: fit-content;
+    margin: 5rem auto;
+}
+
+.item-modify-buttons {
+    width: 20rem;
+    height: 20rem;
+    padding: 4rem;
+    background: var(--secondary-dark);
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    button {
+        background: var(--primary-light);
+        color: var(--text-light);
+        padding: 0.8rem;
+        border-radius: 0.7rem;
+        font-family: speedee, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    button  {
+        width: 100%;
+    }
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    background: var(--primary);
+    padding: 2rem;
+    width: 50rem;
+    border-radius: 0.7rem;
+
+    h2 {
+        font-family: speedee, sans-serif;
+        font-size: 2rem;
+        color: var(--text-light);
+    }
+
+    p {
+        text-wrap: wrap;
+        width: 100%;
+        font-family: roboto, sans-serif;
+        overflow: scroll;
+        height: fit-content;
+        color: var(--text-light);
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        padding: 1rem 0;
+    }
+}
+
+.status {
+    margin: 2rem auto 0 auto;
+    display: flex;
+    gap: 1rem;
+
+    div {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem;
+        border-radius: 0.7rem;
+        color: var(--text-light);
+        font-family: roboto, sans-serif;
+        height: fit-content;
+        margin: auto 0;
     }
 }

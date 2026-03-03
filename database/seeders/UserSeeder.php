@@ -21,5 +21,12 @@ class UserSeeder extends Seeder
         $user->password = Hash::make('12345');
         $user->admin = true;
         $user->save();
+        $user = new User();
+
+        $user->name = 'Regu Larjoe';
+        $user->email = 'regu.larjoe@consumer.io';
+        $user->password = Hash::make('12345');
+        $user->admin = false;
+        $user->save();
     }
 }
