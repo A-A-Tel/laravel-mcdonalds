@@ -3,7 +3,7 @@
     <nav>
         <a href="{{route('home')}}" class="@if($page === 'home') selected @endif">Home</a>
         <a href="{{route('menu')}}" class="@if($page === 'menu') selected @endif">Menukaart</a>
-        <a href="/" class="@if($page === 'reserve') selected @endif">Reserveren</a>
+        <a href="{{route('reservation')}}" class="@if($page === 'reservation') selected @endif">Reserveren</a>
         <a href="{{route('contact')}}" class="@if($page === 'contact') selected @endif">Contact opnemen</a>
     </nav>
     @if(Auth::check())

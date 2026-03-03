@@ -2,9 +2,9 @@
     <div><img src="/img/logo.png" alt="logo"></div>
     <nav>
         <a href="{{route('home')}}" class="@if($page === 'home') selected @endif">Home</a>
-        <a href="{{route('admin.items.index')}}" class="@if($page === 'admin/items') selected @endif">Menu items</a>
-        <a href="/admin/reservations" class="@if($page === 'admin/contact') selected @endif">Reserveringen</a>
-        <a href="/admin/contacts" class="@if($page === 'admin/reserve') selected @endif">Contactinzendingen</a>
+        <a href="{{route('admin.items.index')}}" class="@if($page === 'admin.items') selected @endif">Menu items</a>
+        <a href="{{route('admin.reservations.index')}}" class="@if($page === 'admin.reservation') selected @endif">Reserveringen</a>
+        <a href="{{route('admin.contacts.index')}}" class="@if($page === 'admin.contacts') selected @endif">Contactinzendingen</a>
     </nav>
     @if(Auth::check())
         <div id="buttons">
