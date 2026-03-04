@@ -40,6 +40,7 @@ class ReservationRequestController extends Controller
     {
         $data = $request->validated();
         $reservationRequest = new ReservationRequest();
+        $reservationRequest->datetime = $data['datetime'];
         $reservationRequest->people_count = $data['people_count'];
         $reservationRequest->message = $data['message'];
         $reservationRequest->user_id = Auth::user()->id;
