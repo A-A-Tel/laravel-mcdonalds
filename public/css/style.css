@@ -593,3 +593,18 @@ nav {
         margin: auto 0;
     }
 }
+
+.search-form {
+    margin: 4rem 0;
+    width: 100%;
+    background: var(--accent);
+    input {
+        height: 3rem;
+        width: 100%;
+        background: var(--accent);
+        border: none;
+        padding: 1rem 4rem;
+        font-family: speedee, sans-serif;
+        font-size: 1.4rem;
+    }
+}

@@ -12,7 +12,8 @@
 <main>
     <form class="generic-form" method="post" action="{{route('reservations.store')}}">
         @csrf
-        <input type="number" min="2" max="16" name="people_count" placeholder="Aantal mensen" value="{{ old('people_count') }}">
+        <input required type="number" min="2" max="16" name="people_count" placeholder="Aantal mensen" value="{{ old('people_count') }}">
+        <input required type="datetime-local" name="datetime" value="{{ old('datetime') }}">
         <textarea minlength="16" maxlength="128" name="message"  placeholder="Bericht">{{ old('message') }}</textarea>
         <button type="submit">Opsturen</button>
         @if ($errors->any())

@@ -8,9 +8,18 @@ use Illuminate\Routing\Controller;
 
 class MenuController extends Controller
 {
-    public function index() {
-        $items = Item::all();
+    public function index(Request $request) {
+        $query = Item::query();
+
+        if ($request->has('search')) {
+            $search = $request->input('search');
+
+            $query->where('name', 'LIKE', '%' . $search . '%');
+        }
+
+        $items = $query->get();
 
         return view('pages.menu', ['items' => $items]);
     }
+
 }

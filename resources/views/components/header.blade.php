@@ -12,6 +12,9 @@
             <form method="post" action="{{route('logout')}}">@csrf<button type="submit">Logout</button></form>
         </div>
     @else
-        <div id="buttons"><button onclick="window.location.assign('{{route('login')}}')">Login</button></div>
+        <div id="buttons">
+            <button onclick="window.location.assign('{{route('register')}}')">Registreer</button>
+            <button onclick="window.location.assign('{{route('login')}}')">Login</button>
+        </div>
     @endif
 </header>
