@@ -22,6 +22,7 @@ class ReservationRequestRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'datetime' => 'required|date',
             'people_count' => 'required|int|min:2|max:16',
             'message' => 'required|string|min:16|max:128',
         ];

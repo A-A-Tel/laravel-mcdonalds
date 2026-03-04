@@ -2,6 +2,8 @@
     <h2>Aanvraag #{{$reservation_request->id}}</h2>
     <p>
         Aantal mensen: {{ $reservation_request->people_count }}
+        <br>
+        Datum/tijd: {{ str_replace('T', '/', $reservation_request->datetime) }}
     </p>
     <p>
         {{$reservation_request->message}}

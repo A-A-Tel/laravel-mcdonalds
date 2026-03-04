@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('reservation_requests', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users');
+            $table->dateTime('datetime');
             $table->integer('people_count');
             $table->string('message', 128);
             $table->boolean('allowed')->default(false);
