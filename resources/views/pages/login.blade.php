@@ -15,6 +15,7 @@
         @csrf
         <input required type="email" placeholder="Email" name="email" value="@if($fail??false){{$email}}@endif">
         <input required type="password" placeholder="Wachtwoord" name="password">
+
         @if($fail??false)
             <h6>Het ingevoerde email of wachtwoord was onjuist</h6>
         @endif

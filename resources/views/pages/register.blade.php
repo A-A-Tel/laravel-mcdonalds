@@ -13,16 +13,17 @@
 <main>
     <form action="{{ route('register.attempt') }}" method="post" class="generic-form">
         @csrf
+        <input type="text" required name="name" minlength="2" maxlength="128" placeholder="Naam">
         <input required type="email" placeholder="Email" name="email" value="{{ old('email') }}">
-        <input required type="password" placeholder="Wachtwoord" name="password">
-        <input required type="password" placeholder="Wachtwoord" name="password_confirmation">
+        <input min="6" required type="password" placeholder="Wachtwoord" name="password">
+        <input min="6" max="512" required type="password" placeholder="Wachtwoord" name="password_confirmation">
 
         @if($errors->any())
             @foreach ($errors->all() as $error)
                 <h6>{{ $error }}</h6>
             @endforeach
         @endif
-        <button type="submit">Inloggen</button>
+        <button type="submit">Registreren</button>
     </form>
 </main>
 

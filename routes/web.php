@@ -20,9 +20,9 @@ Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 
 Route::controller(AuthController::class)->group(function ()
 {
-    Route::get('/login', fn() => view('pages.login'))->name('login');
-    Route::get('/register', fn() => view('pages.register'))->name('register');
-    Route::post('/register', fn() => view('pages.register'))->name('register.attempt');
+    Route::view('/login', 'pages.login')->name('login');
+    Route::view('/register', 'pages.register')->name('register');
+    Route::post('/register', 'register')->name('register.attempt');
     Route::post('/login', 'login')->name('login.attempt');
     Route::post('/logout', 'logout')->middleware('auth')->name('logout');
 });
