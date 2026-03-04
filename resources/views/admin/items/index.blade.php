@@ -10,6 +10,18 @@
 @include('components.admin.header', ['page' => 'admin.items'])
 
 <main>
+    <form class="search-form" action="javascript:void(0);" onsubmit="function onSubmit(formElement) {
+
+        const formData = new FormData(formElement);
+        const search = formData.get('searchQuery').toString();
+
+        window.location.assign('{{ route('menu') }}?search=' + encodeURIComponent(search));
+
+        return false;
+    }
+    return onSubmit(this)">
+        <input name="searchQuery" placeholder="Search" type="text">
+    </form>
     <a href="{{route('admin.items.create')}}" class="item-add">Toevoegen</a>
     <div class="child-wrapper">
         @foreach($items as $item)

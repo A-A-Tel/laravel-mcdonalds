@@ -5,14 +5,23 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreItemRequest;
 use App\Http\Requests\UpdateItemRequest;
 use App\Models\Item;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ItemController
 {
-    public function index()
+    public function index(Request $request)
     {
-        $items = Item::all();
+        $query = Item::query();
+
+        if ($request->has('search')) {
+            $search = $request->input('search');
+
+            $query->where('name', 'LIKE', '%' . $search . '%');
+        }
+
+        $items = $query->get();
 
         return view('admin.items.index', ['items' => $items]);
     }
