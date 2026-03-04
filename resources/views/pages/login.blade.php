@@ -11,11 +11,11 @@
 
 
 <main>
-    <form action="/login" method="post" class="generic-form">
+    <form action="{{route('login.attempt')}}" method="post" class="generic-form">
         @csrf
-        <input required type="email" placeholder="Email" name="email" value="@if($fail){{$email}}@endif">
+        <input required type="email" placeholder="Email" name="email" value="@if($fail??false){{$email}}@endif">
         <input required type="password" placeholder="Wachtwoord" name="password">
-        @if($fail)
+        @if($fail??false)
             <h6>Het ingevoerde email of wachtwoord was onjuist</h6>
         @endif
         <button type="submit">Inloggen</button>
