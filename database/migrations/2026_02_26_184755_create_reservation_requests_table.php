@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('reservation_requests', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->dateTime('datetime');
             $table->integer('people_count');
             $table->string('message', 128);

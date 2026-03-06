@@ -104,6 +104,7 @@ class ItemController
     public function destroy(Item $item)
     {
         $item->delete();
+        Storage::disk('public')->delete('items/' . $item->image);
         return redirect()->route('admin.items.index');
     }
 
