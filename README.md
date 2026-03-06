@@ -14,3 +14,20 @@
   php artisan storage:link
   php artisan serve
 ```
+
+De administrator accountinformatie is:
+
+```
+   Email: admin.istrator@company.com
+   Pass: 12345
+```
+
+De standaardgebruiker is:
+
+```
+   Email: regu.larjoe@consumer.io
+   Pass: 12345
+```
+
+Ga naar het dashboard (rechtsboven) als admin om naar het paneel te gaan, als gebruiker ga je naar je huidige
+reserveringen en contactverzoeken.
