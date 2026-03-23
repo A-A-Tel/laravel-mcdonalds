@@ -14,7 +14,7 @@ class ContactRequestController extends Controller
      */
     public function index()
     {
-        $contactRequests = ContactRequest::all()->where('user_id', Auth::id());
+        $contactRequests = ContactRequest::query()->where('user_id', Auth::id());
 
         return view('pages.contacts.index', ['contact_requests' => $contactRequests]);
     }
